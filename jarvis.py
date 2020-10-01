@@ -18,8 +18,6 @@ import sys
 import time
 
 
-
-
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices');
 # print(voices[0].id)
@@ -85,7 +83,10 @@ if __name__ == "__main__": #main program
         if "open notepad" in query:
             npath = "C:\\Windows\\system32\\notepad.exe"
             os.startfile(npath)
-
+            
+        elif 'hi' in query or 'hello' in query:
+            speak('Hello sir, how may I help you?')
+        
         elif "open adobe reader" in query:
             apath = "C:\\Program Files (x86)\\Adobe\\Reader 11.0\\Reader\\AcroRd32.exe"
             os.startfile(apath)
@@ -147,7 +148,20 @@ if __name__ == "__main__": #main program
 
         elif "song on youtube" in query:
             kit.playonyt("see you again")
+            
+        elif 'timer' in query or 'stopwatch' in query:
+            speak("For how many minutes?")
+            timing = takeCommand()
+            timing =timing.replace('minutes', '')
+            timing = timing.replace('minute', '')
+            timing = timing.replace('for', '')
+            timing = float(timing)
+            timing = timing * 60
+            speak(f'I will remind you in {timing} seconds')
 
+            time.sleep(timing)
+            speak('Your time has been finished sir')
+         
         elif "email to avinash" in query:
             try:
                 speak("what should i say?")
