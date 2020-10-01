@@ -1,3 +1,4 @@
+master
 #Author- Avinash
 #Project Name-Jarvis(Desktop Assistant)
 #Language Used- Python
@@ -72,7 +73,7 @@ def sendEmail(to,content):
     server.close()
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": #main program
     wish()
     while True:
     # if 1:
