@@ -1,4 +1,8 @@
-#all modules used
+master
+#Author- Avinash
+#Project Name-Jarvis(Desktop Assistant)
+#Language Used- Python
+
 import pyttsx3
 import speech_recognition as sr
 import datetime
